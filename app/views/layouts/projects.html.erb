@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+    	<title><%= yield :title %></title>
+    	<%= csrf_meta_tags %>
+    	<%= csp_meta_tag %>
+
+    	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    	<%= yield :style %>
+    	<%= yield :script %>
+	</head>
+	<body>
+    	<br>
+    	<hr class="style1">
+    	<table>
+        	<tr>
+            	<td width = "100%"><b style="color:blue;">Welcome to 案件管理ボータル</b></td>
+            	<td><%= yield :button %></td>
+        	</tr>
+    	</table>
+    	<hr class="style1">
+    	<br>
+    	<br>
+    	<%= yield %>
+  	</body>
+</html>

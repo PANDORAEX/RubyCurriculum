@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: MyString
+  start_date: 2018-08-13
+  project_no: MyString
+  project_name: MyString
+  protype_code: MyString
+  language_code: MyString
+  summary: MyString
+  status_code: MyString
+  customer: MyString
+  charge: MyString
+  reviewer: MyString
+  release: 2018-08-13
+  remarks: MyString
+
+two:
+  project_id: MyString
+  start_date: 2018-08-13
+  project_no: MyString
+  project_name: MyString
+  protype_code: MyString
+  language_code: MyString
+  summary: MyString
+  status_code: MyString
+  customer: MyString
+  charge: MyString
+  reviewer: MyString
+  release: 2018-08-13
+  remarks: MyString

@@ -1,0 +1,40 @@
+﻿<% content_for :script do %>
+    <script type="text/javascript">
+        function reset_blank(){
+            document.getElementById("users_userid").innerText = "";
+            document.getElementById("users_password").innerText = "";
+        }
+    </script>
+<% end %>
+
+    <br>
+    <hr class="style1">
+    <br>
+    <b>Welcome to 案件管理ボータル</b>
+    <br>
+    <br>
+    <hr class="style1">
+    <br>
+    <br>
+    <h2>ログイン</h2>
+    <hr class="style2">
+    <br>
+    ユーザー名とパスワードを入力してください
+    <hr width="90%" align="left" style="height: 2px;border: 0;background-color: #c8c8c8">
+    <div style="color: red">
+    	<% if flash[:usererror] %>
+			<%= simple_format(flash[:usererror], {}, wrapper_tag: "div") %>
+    	<% end %>
+    </div>
+    <br>
+    <%= form_for @loginuser, :url => {:action => 'login'} do |f| %>
+        <table border = "0">
+            <tr><td>ユーザ名：</td><td><%= f.text_field :userid, {:size => '15', :maxlength => '8'} %></td></tr>
+            <tr><td>パスワード:</td><td><%= f.password_field :password %></td></tr>
+            <tr>
+                <td></td>
+                <td><button type="submit" name="login" style="width: 80px"><b>ログイン</b></button>
+                    <input type="button" name ="clear" style="width: 80px;font-weight: bold" value = "クリア" onclick="reset_blank();"></td>
+            </tr>
+        </table>
+    <% end %>

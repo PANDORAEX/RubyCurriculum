@@ -1,0 +1,2 @@
+class ProjectSequence < ApplicationRecord
+end
